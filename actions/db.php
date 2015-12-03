@@ -1,5 +1,5 @@
 <?php
-	include '../config.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/config.php';
 
 	$conn = mysqli_connect($host, $username, $password, $db);
 
@@ -8,5 +8,5 @@
 	       echo "<br>";
 	}
 	else{
-	        echo "Successfully connected to MySQL...<br>";
+	       ;
 	}

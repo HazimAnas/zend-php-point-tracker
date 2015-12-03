@@ -1,17 +1,15 @@
 <?php
-	include 'db.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/actions/db.php';
 
 	session_start();
 
-	$tableName = 'program';
+	$tableName = 'team';
 
 	if(isset($_POST['save'])) {
 
 		$name = mysqli_real_escape_string($conn, $_POST['name']);
-		$description = mysqli_real_escape_string($conn, $_POST['description']);
-		$dateAdded = time();
 		$initial = '';
-		$userId = $_SESSION['userId'];
+		$programId = $_SESSION['programId'];
 
 		foreach (explode(' ', $name) as $word) {
 		    $initial .= strtoupper($word[0]);
@@ -19,10 +17,10 @@
 
 	    $id = $initial . rand(10, 9999);
 
-		if(mysqli_query($conn,"INSERT INTO $tableName (id, name, description, dateAdded, userId) VALUES ('$id', '$name', '$description', '$dateAdded', '$userId')"))
+		if(mysqli_query($conn,"INSERT INTO $tableName (id, name, programId) VALUES ('$id', '$name', '$programId')"))
 		{
 			echo "Successfully Inserted data<br>";
-			header("Location: ../program.php", true, 301);
+			header("Location: /program/view-program.php?id=".$_SESSION['programId'], true, 301);
 		}
 		else{
 			echo "Data not Inserted";

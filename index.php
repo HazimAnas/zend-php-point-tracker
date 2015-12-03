@@ -5,6 +5,11 @@
 		header("Location: home.php", true, 301);
 		die();
 	}
+?>
 
-	include 'views/forms/login.php'; 
-	include 'views/partials/footer.php';
+	<div id="header-image">
+<?php include 'views/forms/login.php'; ?>
+	</div>
+
+
+<?php include 'views/partials/footer.php'; ?>

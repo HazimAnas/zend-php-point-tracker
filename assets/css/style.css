@@ -5,7 +5,6 @@ html {
 
 body {
 	background-color: #90EE90;
-	width: 960px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -17,13 +16,11 @@ header,footer {
 	background-color: #FFF;
 	color: #90EE90;
 	height: auto;
-	padding-left: 1em;
+	padding: 0 1em;
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	height: 100px;
 }
 
 header a {
@@ -37,4 +34,62 @@ h1 {
 
 a {
 	text-decoration: none;
+}
+
+header h1 {
+	display: inline-block;
+}
+
+form {
+	min-width: 12em;
+	margin: 0 auto;
+}
+
+#navigation {
+	float: right;
+	padding: 0.5em 0;
+}
+
+#content-wrap {
+	padding: 0 2em;
+	min-height: 100%;
+}
+
+.form-small {
+	border: 2px solid #90EE90;
+	border-radius: 0.5em;
+	position: relative;
+	float: right;
+	top: 2em;
+	right: 2em;
+	width: 12em;
+	padding: 1em;
+	background-color: #FFF;
+}
+
+.form-large {
+	padding: 1em;
+	background-color: #FFF;
+	margin: 1em auto 0;
+}
+
+
+.form input[type="text"], .form input[type="password"] ,.form textarea{
+	border: 1px solid #90EE90;
+	width: 100%;
+	resize: none;
+}
+
+.form button , .form a {
+	margin-top: 1em;
+}
+
+#header-image {
+	height: 100%;
+	width: 100%;
+	background: url("../img/crowd1.jpg") no-repeat center center fixed;;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }

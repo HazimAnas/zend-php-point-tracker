@@ -6,9 +6,12 @@
 	</head>
 	<body>
 		<header>
-			<h1><a href="home.php">Point Tracker</a></h1>
-			<?php 
-				if(isset($_SESSION['username'])) { ?>
-					<a href="actions/logout.php">Logout</a>
-			<?php	} ?>
+			<h1><a href="/home.php">Point Tracker</a></h1>
+			
+			<div id="navigation">
+				<?php 
+					if(isset($_SESSION['username'])) { ?>
+						<a href="/actions/logout.php">Logout</a>
+				<?php	} ?>
+			</div>
 		</header>
