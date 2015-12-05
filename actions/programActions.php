@@ -22,7 +22,7 @@
 		if(mysqli_query($conn,"INSERT INTO $tableName (id, name, description, dateAdded, userId) VALUES ('$id', '$name', '$description', '$dateAdded', '$userId')"))
 		{
 			echo "Successfully Inserted data<br>";
-			header("Location: ../program.php", true, 301);
+			header("Location: /program.php", true, 301);
 		}
 		else{
 			echo "Data not Inserted";

@@ -3,8 +3,8 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/views/partials/header.php';
 ?>
 	 <div id="content-wrap">
-	 	<a href="program/create-program.php">Create Program</a>
-	 	<table class="table-data">
+	 	<a class="btn btn-success" href="program/create-program.php">Create Program</a>
+	 	<table class="table table-striped">
 			<?php	
 				include $_SERVER['DOCUMENT_ROOT'].'/actions/db.php';
 
